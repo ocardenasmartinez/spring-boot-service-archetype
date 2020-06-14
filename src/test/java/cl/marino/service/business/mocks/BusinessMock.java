@@ -1,4 +1,6 @@
-package cl.marino.service.business;
+package cl.marino.service.business.mocks;
+
+import cl.marino.service.business.Business;
 
 public class BusinessMock implements Business {
 

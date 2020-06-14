@@ -1,10 +1,9 @@
 package cl.marino.service.context;
 
 import cl.marino.service.business.Business;
-import cl.marino.service.business.BusinessMock;
+import cl.marino.service.business.mocks.BusinessMock;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 @TestConfiguration
 public class ControllerContextTest {
