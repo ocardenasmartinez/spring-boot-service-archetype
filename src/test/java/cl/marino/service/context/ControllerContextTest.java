@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @TestConfiguration
-public class ConfigurationContextTest {
+public class ControllerContextTest {
 
     @Bean
     public Business getBusiness(){

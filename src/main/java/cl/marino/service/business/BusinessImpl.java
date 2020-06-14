@@ -11,7 +11,7 @@ public class BusinessImpl implements Business {
 
     @Override
     public String getMethod(String arg) {
-        userRepository.save(new UserEntity(0L, "", ""));
+        userRepository.save(new UserEntity(0L, "Juan", "Perez"));
         return arg;
     }
 }
