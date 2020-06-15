@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 public class UserController {
 
@@ -14,8 +13,8 @@ public class UserController {
     private Business business;
 
     @GetMapping("/")
-    public String getMethod(@RequestParam String name){
-        return "Hello " + business.getMethod(name);
+    public String createUser(@RequestParam String firstName, @RequestParam String lastName){
+        return "Hello " + business.createUser(firstName, lastName);
     }
 
 }

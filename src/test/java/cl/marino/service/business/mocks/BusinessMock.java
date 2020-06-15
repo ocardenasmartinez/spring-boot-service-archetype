@@ -5,7 +5,7 @@ import cl.marino.service.business.Business;
 public class BusinessMock implements Business {
 
     @Override
-    public String getMethod(String arg) {
-        return arg;
+    public String createUser(String firstName, String lastName) {
+        return "OK";
     }
 }

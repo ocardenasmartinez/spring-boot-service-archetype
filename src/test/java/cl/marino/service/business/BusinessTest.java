@@ -14,7 +14,7 @@ public class BusinessTest {
 
     @Test
     public void businessTest(){
-        assertThat(business.getMethod("na")).isNotNull();
+        assertThat(business.createUser("Juan", "Perez")).isNotNull();
     }
 
 }

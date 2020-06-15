@@ -10,8 +10,8 @@ public class BusinessImpl implements Business {
     private UserRepository userRepository;
 
     @Override
-    public String getMethod(String arg) {
-        userRepository.save(new UserEntity(0L, "Juan", "Perez"));
-        return arg;
+    public String createUser(String firstName, String lastName) {
+        userRepository.save(new UserEntity(0L, firstName, lastName));
+        return "OK";
     }
 }
