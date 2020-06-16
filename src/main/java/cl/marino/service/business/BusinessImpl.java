@@ -23,11 +23,26 @@ public class BusinessImpl implements Business {
 
     @Override
     public int createUser() {
-        return ofNullable(userService.getUsers()).map(users -> {
+        return ofNullable(userService.getUsers()).map(getListIntegerFunction()).orElse(0);
+    }
+
+    private Function<List<UserDTO>, Integer> getListIntegerFunction() {
+        return users -> {
             final List<UserEntity> count = new ArrayList<>();
             users.forEach(user -> count.add(userRepository.save(new UserEntity(0L, user.getFirstName(), user.getLastName()))));
             return count.size();
-        }).orElse(0);
+        };
+    }
+
+    @Override
+    public List<UserDTO> getAllUsers() {
+        final List<UserDTO> usersOut = new ArrayList<>();
+        return ofNullable(userRepository.findAll()).map(users -> getUserDTOS(usersOut, users)).orElse(new ArrayList<>());
+    }
+
+    private List<UserDTO> getUserDTOS(List<UserDTO> usersOut, Iterable<UserEntity> users) {
+        users.forEach(user -> usersOut.add(new UserDTO(user.getFirstName(), user.getLastName())));
+        return usersOut;
     }
 
 }
