@@ -12,7 +12,6 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public List<UserDTO> getUsers() {
-        UserDTO[] users = new RestTemplate().getForEntity(HTTP_LOCALHOST_8081, UserDTO[].class).getBody();
-        return Arrays.asList(users);
+        return Arrays.asList(new RestTemplate().getForEntity(HTTP_LOCALHOST_8081, UserDTO[].class).getBody());
     }
 }
