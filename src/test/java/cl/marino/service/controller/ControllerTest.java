@@ -16,7 +16,7 @@ public class ControllerTest {
 
     @Test
     public void controllerTest() throws Exception {
-        assertThat(controller.createUser("test", "TEST")).isNotNull();
+        assertThat(controller.createUser()).isNotNull();
     }
 
 }
