@@ -16,6 +16,7 @@ public class BusinessTest {
     @Test
     public void businessTest(){
         assertThat(business.createUser()).isNotNull();
+        assertThat(business.getAllUsers()).isNotNull();
     }
 
 }
