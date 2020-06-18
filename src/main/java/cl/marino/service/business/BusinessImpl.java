@@ -2,13 +2,12 @@ package cl.marino.service.business;
 
 import cl.marino.service.business.entities.UserEntity;
 import cl.marino.service.dao.UserService;
-import cl.marino.service.dto.UserDTO;
+import cl.marino.service.dao.dto.UserDTO;
 import cl.marino.service.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
 import java.util.function.Function;
 
 import static java.util.Optional.*;

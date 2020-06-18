@@ -1,10 +1,9 @@
-package cl.marino.service.dto;
+package cl.marino.service.dao.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import net.bytebuddy.asm.Advice;
 
 @Getter
 @Setter

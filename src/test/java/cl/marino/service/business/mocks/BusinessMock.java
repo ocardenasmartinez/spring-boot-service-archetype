@@ -1,7 +1,7 @@
 package cl.marino.service.business.mocks;
 
 import cl.marino.service.business.Business;
-import cl.marino.service.dto.UserDTO;
+import cl.marino.service.dao.dto.UserDTO;
 
 import java.util.List;
 
