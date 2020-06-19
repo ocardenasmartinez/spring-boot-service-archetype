@@ -9,9 +9,8 @@ import java.util.List;
 
 public class UserServiceImpl implements UserService{
 
-    @Value( "${service-mock}" )
+    @Value("${service-mock}")
     private String serviceMock;
-    //public static final String HTTP_LOCALHOST_8081 = "http://localhost:8081/";
 
     @Override
     public List<UserDTO> getUsers() {

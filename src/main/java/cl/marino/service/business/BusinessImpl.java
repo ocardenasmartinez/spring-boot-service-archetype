@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 import static java.util.Optional.*;
@@ -28,9 +29,13 @@ public class BusinessImpl implements Business {
     private Function<List<UserDTO>, Integer> getListIntegerFunction() {
         return users -> {
             final List<UserEntity> count = new ArrayList<>();
-            users.forEach(user -> count.add(userRepository.save(new UserEntity(0L, user.getFirstName(), user.getLastName()))));
+            users.forEach(getUserDTOConsumer(count));
             return count.size();
         };
+    }
+
+    private Consumer<UserDTO> getUserDTOConsumer(List<UserEntity> count) {
+        return user -> count.add(userRepository.save(new UserEntity(0L, user.getFirstName(), user.getLastName())));
     }
 
     @Override
