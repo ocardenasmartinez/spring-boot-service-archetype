@@ -1,8 +1,8 @@
 package cl.marino.service.business;
 
 import cl.marino.service.business.entities.UserEntity;
-import cl.marino.service.dao.UserService;
-import cl.marino.service.dao.dto.UserDTO;
+import cl.marino.service.feign.dto.UserDTO;
+import cl.marino.service.feign.UserFeignClient;
 import cl.marino.service.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -19,11 +19,11 @@ public class BusinessImpl implements Business {
     private UserRepository userRepository;
 
     @Autowired
-    private UserService userService;
+    private UserFeignClient userFeignClient;
 
     @Override
     public int createUser() {
-        return ofNullable(userService.getUsers()).map(getListIntegerFunction()).orElse(0);
+        return ofNullable(userFeignClient.getUsers()).map(getListIntegerFunction()).orElse(0);
     }
 
     @Override

@@ -1,6 +1,6 @@
 package cl.marino.service.business;
 
-import cl.marino.service.dao.dto.UserDTO;
+import cl.marino.service.feign.dto.UserDTO;
 
 import java.util.List;
 
