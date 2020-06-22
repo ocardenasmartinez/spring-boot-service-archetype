@@ -7,10 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
-@FeignClient("SERVICE-DUMMY")
-public interface UserFeignClient extends UserFeignClientBasic {
+public interface UserFeignClientBasic {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/getusers")
     List<UserDTO> getUsers();
 
 }
