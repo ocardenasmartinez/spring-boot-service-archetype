@@ -8,4 +8,5 @@ public interface Business {
 
     int createUser();
     List<UserDTO> getAllUsers();
+
 }

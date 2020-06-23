@@ -1,6 +1,10 @@
 package cl.marino.service.context;
 
-//@TestConfiguration
+import org.springframework.boot.test.context.TestConfiguration;
+
+@TestConfiguration
 public class BusinessContextTest {
+
+    //mock feign client bean
 
 }

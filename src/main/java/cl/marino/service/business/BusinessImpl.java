@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
-import static java.util.Optional.*;
+import static java.util.Optional.ofNullable;
 
 public class BusinessImpl implements Business {
 
