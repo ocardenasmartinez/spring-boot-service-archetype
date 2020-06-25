@@ -1,10 +1,16 @@
 package cl.marino.service.context;
 
+import cl.marino.service.feign.FeignClientMock;
+import cl.marino.service.feign.UserFeignClient;
 import org.springframework.boot.test.context.TestConfiguration;
+import org.springframework.context.annotation.Bean;
 
 @TestConfiguration
 public class BusinessContextTest {
 
-    //mock feign client bean
+    @Bean
+    public UserFeignClient getUserFeignClient() {
+        return new FeignClientMock();
+    }
 
 }

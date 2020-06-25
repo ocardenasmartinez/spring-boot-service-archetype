@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
+
 public interface UserFeignClientBasic {
 
     List<UserDTO> getUsers();
