@@ -3,7 +3,6 @@ package cl.marino.service.business;
 import cl.marino.service.business.entities.UserEntity;
 import cl.marino.service.hystrix.UserHystrix;
 import cl.marino.service.hystrix.dto.UserDTO;
-import cl.marino.service.hystrix.feign.UserFeignClient;
 import cl.marino.service.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 

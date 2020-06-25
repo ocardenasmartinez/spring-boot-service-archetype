@@ -1,14 +1,13 @@
-package cl.marino.service.business;
+package cl.marino.service.business.tests;
 
+import cl.marino.service.business.Business;
 import cl.marino.service.context.BusinessContextTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Profile;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@Profile("Test")
 @SpringBootTest(classes = BusinessContextTest.class)
 public class BusinessTest {
 
