@@ -28,8 +28,7 @@ public class BusinessImpl implements Business {
 
     @Override
     public List<UserDTO> getAllUsers() {
-        final List<UserDTO> usersOut = new ArrayList<>();
-        return ofNullable(userRepository.findAll()).map(users -> getUserDTOS(usersOut, users)).orElse(new ArrayList<>());
+        return ofNullable(userRepository.findAll()).map(users -> getUserDTOS(new ArrayList<>(), users)).orElse(new ArrayList<>());
     }
 
     private List<UserDTO> getUserDTOS(List<UserDTO> usersOut, Iterable<UserEntity> users) {
