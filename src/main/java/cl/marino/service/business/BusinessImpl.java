@@ -1,8 +1,9 @@
 package cl.marino.service.business;
 
 import cl.marino.service.business.entities.UserEntity;
-import cl.marino.service.feign.dto.UserDTO;
-import cl.marino.service.feign.UserFeignClient;
+import cl.marino.service.hystrix.UserHystrix;
+import cl.marino.service.hystrix.dto.UserDTO;
+import cl.marino.service.hystrix.feign.UserFeignClient;
 import cl.marino.service.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -19,11 +20,11 @@ public class BusinessImpl implements Business {
     private UserRepository userRepository;
 
     @Autowired
-    private UserFeignClient userFeignClient;
+    private UserHystrix userHystrix;
 
     @Override
     public int createUser() {
-        return ofNullable(userFeignClient.getUsers()).map(getListIntegerFunction()).orElse(0);
+        return ofNullable(userHystrix.getUsers()).map(getListIntegerFunction()).orElse(0);
     }
 
     @Override

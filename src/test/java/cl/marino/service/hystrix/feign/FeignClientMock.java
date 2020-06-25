@@ -1,6 +1,6 @@
-package cl.marino.service.feign;
+package cl.marino.service.hystrix.feign;
 
-import cl.marino.service.feign.dto.UserDTO;
+import cl.marino.service.hystrix.dto.UserDTO;
 
 import java.util.List;
 

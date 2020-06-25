@@ -1,4 +1,4 @@
-package cl.marino.service.feign.dto;
+package cl.marino.service.hystrix.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
